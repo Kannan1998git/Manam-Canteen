@@ -1,0 +1,130 @@
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    gap: 45px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.social-icons img{
+    height: 32px;
+}
+        .footer-container {
+            position: relative;
+            overflow: hidden;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .footer-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .footer-right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+  
+
+        .icon {
+            display: inline-flex;
+            align-items: center;
+            margin: 0 5px;
+        }
+
+        .icon img {
+            height: 35px;
+            object-fit: contain;
+        }
+
+        .canada-title {
+            font-size: 12px;
+            color: #d4af37;
+            letter-spacing: 2px;
+            font-weight: 400;
+            text-transform: uppercase;
+            padding: 20px;
+        }
+
+        .back-to-top {
+
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .back-to-top a {
+            color: #8b4513;
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+            padding-top: 20px;
+        }
+
+        .back-to-top a:hover {
+            color: #d4af37;
+        }
+
+        .arrow-up {
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 8px solid currentColor;
+            margin-bottom: 2px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .footer-container {
+                padding: 30px 15px;
+            }
+            
+            .manam-title {
+                font-size: 28px;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .footer-left,
+            .footer-right {
+                opacity: 0.7;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .manam-title {
+                font-size: 24px;
+            }
+            
+            .icon img {
+                height: 30px;
+            }
+        }
+
+.manam-title {
+font-family: Belgiano Serif;
+font-weight: 400;
+font-size: 38.01px;
+line-height: 100%;
+letter-spacing: 0%;
+color: #2D5E4E;    
+}

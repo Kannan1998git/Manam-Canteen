@@ -1,0 +1,153 @@
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero__content">
+        <div class="banner-text">
+      <h1>Manam <span class="icon"><img src="assets/manam_logo.png" style="height: 35px;object-fit: contain;" alt="logo">
+</span> Canteen</h1>
+      <p>CANADA</p>
+    </div>
+
+        </div>
+    </section>
+
+    <section class="authentic-section">
+        <img src="assets/left_side_img.svg" alt="left_side" class="floral left">
+  <div class="hero-content">
+    <h1 class="primary-header pb-5">Experience Authentic South Indian Flavors at Manam</h1>
+    <p class="description">
+      Welcome to Manam, where we bring the vibrant tastes and rich traditions of South India to Canada.
+      Join us for an unforgettable dining experience that celebrates culture, community, and culinary excellence.
+    </p>
+    <div class="text-center">
+    <button class="manam-btn">Explore more</button>
+
+    </div>
+  </div>
+        <img src="assets/right_side_img.svg" alt="left_side" class="floral right">
+</section>
+
+
+    <!-- Menu Section -->
+    <section class="menu-section section--cream" id="menu">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="primary-header">Our Menu</h2>
+                <p class="description">Discover the rich and sophisticated flavors of our authentic Korean cuisine, prepared with the finest ingredients and traditional cooking methods passed down through generations.</p>
+            </div>
+            <div class="food-scroller-container">
+      <!-- Header text -->      
+      <!-- Scrollable categories -->
+      <div class="categories-wrapper">
+        <div class="categories-scroll" #scrollContainer>
+            @for(category of categories;track category){
+   <div class="category-card" >
+            <div class="category-image">
+              <img [src]="category.image" [alt]="category.name" />
+              <div class="category-overlay">
+                <span class="category-name">{{ category.name }}</span>
+              </div>
+            </div>
+          </div>
+            }
+       
+        </div>
+        
+        <!-- Navigation arrows -->
+   
+      </div>
+      
+      <!-- View all button -->
+      <div class="view-all-container">
+        <div></div>
+        <button class="manam-btn">View all</button>
+        <div class="text-align-center">
+               <button class="nav-arrow" (click)="scrollLeft()" [disabled]="isAtStart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15,18 9,12 15,6"></polyline>
+          </svg>
+        </button>
+        
+        <button class="nav-arrow" (click)="scrollRight()" >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9,18 15,12 9,6"></polyline>
+          </svg>
+        </button>
+        </div>
+      </div>
+    </div>
+
+        </div>
+    </section>
+
+    <!-- Service Section -->
+    <section class="section service" id="service">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="primary-header">Service</h2>
+            </div>
+            <div class="description">
+                <p>We are committed to providing exceptional dining experiences with outstanding service that reflects the warmth and hospitality of Korean culture. Our dedicated team ensures every guest feels welcomed and cherished.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dine-in Section -->
+    <section class="section section--dine" id="dine">
+        <div class="container">
+            <div class="dine__grid">
+                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Modern Korean Restaurant Interior" class="dine__image">
+
+                <div class="dine__content">
+                    <h3>Dine-In</h3>
+                    <p>Join us for an unforgettable dining experience in our beautifully designed restaurant space that captures the essence of Korean hospitality.</p>
+                    <p>Our warm and inviting atmosphere, combined with traditional Korean decor, makes it the perfect place for family gatherings, romantic dinners, or business meetings.</p>
+                    <p>Experience the authentic flavors while enjoying our exceptional service in a comfortable and welcoming environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="section section--brown">
+        <div class="container">
+            <div class="story__grid">
+                <div class="story__content">
+                    <h3>Our Story</h3>
+                    <p>At Manam Canteen, we serve authentic South Indian flavours made with traditional recipes and a whole lot of heart. From crispy dosas to rich curries, our food brings the warmth of home right here to Canada. Whether you dine in, take out, order delivery, or book us for catering — every bite is a taste of tradition.</p>
+                </div>
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Korean Chef Preparing Traditional Food" class="story__image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+       <div class="reservation_section" id="reservation">
+        <!-- Header Section -->
+        <div class="header-section">
+            <div class="header-content">
+                <h1>Reserve Your<br>Table Today!</h1>
+            </div>
+            <div class="right-content description">
+                <p>Experience authentic South Indian cuisine—book your reservation or order online for a delightful meal.</p>
+                <button class="contact-btn">Contact Us</button>
+            </div>
+        </div>
+
+        <!-- Contact Info Section -->
+        <div class="contact-info">
+            <div class="contact-item address-icon">
+                <h3>Address</h3>
+                <p>Unit 3B, 3415 Dixie Rd,<br>Mississauga, Ontario, L4Y 4J6</p>
+            </div>
+            <div class="contact-item phone-icon">
+                <h3>Phone</h3>
+                <p><a href="tel:+19052380707">+1 905 238 0707</a></p>
+            </div>
+            <div class="contact-item email-icon">
+                <h3>Reservation</h3>
+<p>
+  <a href="mailto:manamcanteen&#64;gmail.com">manamcanteen&#64;gmail.com</a>
+</p>           </div>
+        </div>
+    </div>
