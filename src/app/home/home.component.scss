@@ -1,6 +1,4 @@
-*{
-      font-family: Belgiano Serif !important;
-}
+
 
 .banner-text {
   background-color: rgba(0, 0, 0, 0.5); /* dark background for text */
@@ -24,6 +22,9 @@
 }
 .section--dine{
   background-color: #823A2F1A;
+     margin: 80px;
+     padding: 50px;
+     border-radius: 8px;
 }
 .banner-text p {
   font-size: 14px;
@@ -56,6 +57,7 @@
   // font-size: 1rem;
   // color: #666;
   // line-height: 1.6;
+  padding: 0 20px;
   margin-bottom: 2rem;
 }
 .text-center{
@@ -236,11 +238,42 @@ padding-bottom: .5rem;
 .menu-section{
   padding: 80px 35px;
 }
+.service{
+  padding: 40px 0 0 0;
+}
+
     /* Responsive design */
     @media (max-width: 768px) {
-      .food-scroller-container {
-        padding: 15px;
+      .story-content p{
+            font-size: 16px;
+
       }
+      .header-content{
+        padding: 50px 20px !important;
+      }
+      .right-content {
+    padding: 30px 20px !important;
+}
+      .authentic-section p{
+        padding: 0 !important;
+      }
+      .section--dine{
+            margin: 10px !important;
+    padding: 20px !important;
+      }
+    .container{
+  padding: 0 !important;
+}
+.categories-scroll{
+  padding: 0 !important;
+}
+.service ,.section{
+  padding: 20px !important;
+}
+
+.menu-section {
+  padding: 25px 20px !important;
+}
 .header-content{
   width: 100% !important;
 }
@@ -285,10 +318,7 @@ padding-bottom: .5rem;
     }
 
 // scroll container end
-// restaurant start
-       .reservation_section {
-          
-        }
+
 
         /* Header Section */
         .header-section {
@@ -426,4 +456,5 @@ padding-bottom: .5rem;
                 border-bottom: none;
             }
         }
-// restaurant end
+
+        

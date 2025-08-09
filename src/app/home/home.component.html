@@ -1,7 +1,9 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero__content">
+        <div class="hero__content" data-aos="fade-up">
+       
+            
         <div class="banner-text">
       <h1>Manam <span class="icon"><img src="assets/manam_logo.png" style="height: 35px;object-fit: contain;" alt="logo">
 </span> Canteen</h1>
@@ -14,12 +16,12 @@
     <section class="authentic-section">
         <img src="assets/left_side_img.svg" alt="left_side" class="floral left">
   <div class="hero-content">
-    <h1 class="primary-header pb-5">Experience Authentic South Indian Flavors at Manam</h1>
-    <p class="description">
+    <h1 class="primary-header pb-5"  data-aos="fade-left">Experience Authentic South Indian Flavors at Manam</h1>
+    <p class="description"  data-aos="fade-right">
       Welcome to Manam, where we bring the vibrant tastes and rich traditions of South India to Canada.
       Join us for an unforgettable dining experience that celebrates culture, community, and culinary excellence.
     </p>
-    <div class="text-center">
+    <div class="text-center" data-aos="fade-down">
     <button class="manam-btn">Explore more</button>
 
     </div>
@@ -32,13 +34,13 @@
     <section class="menu-section section--cream" id="menu">
         <div class="container">
             <div class="section__header">
-                <h2 class="primary-header">Our Menu</h2>
-                <p class="description">Discover the rich and sophisticated flavors of our authentic Korean cuisine, prepared with the finest ingredients and traditional cooking methods passed down through generations.</p>
+                <h2 class="primary-header" data-aos="fade-right">Our Menu</h2>
+                <p class="description"  data-aos="fade-left">Discover the rich and sophisticated flavors of our authentic Korean cuisine, prepared with the finest ingredients and traditional cooking methods passed down through generations.</p>
             </div>
             <div class="food-scroller-container">
       <!-- Header text -->      
       <!-- Scrollable categories -->
-      <div class="categories-wrapper">
+      <div class="categories-wrapper" data-aos="fade-up">
         <div class="categories-scroll" #scrollContainer>
             @for(category of categories;track category){
    <div class="category-card" >
@@ -58,7 +60,7 @@
       </div>
       
       <!-- View all button -->
-      <div class="view-all-container">
+      <div class="view-all-container"  data-aos="fade-up">
         <div></div>
         <button class="manam-btn">View all</button>
         <div class="text-align-center">
@@ -81,42 +83,48 @@
     </section>
 
     <!-- Service Section -->
-    <section class="section service" id="service">
+     <div  id="service"></div>
+    <section class="service" id="service">
         <div class="container">
-            <div class="section__header">
+            <div class="section__header" data-aos="fade-up">
                 <h2 class="primary-header">Service</h2>
             </div>
-            <div class="description">
+            <div class="description" data-aos="fade-up">
                 <p>We are committed to providing exceptional dining experiences with outstanding service that reflects the warmth and hospitality of Korean culture. Our dedicated team ensures every guest feels welcomed and cherished.</p>
             </div>
         </div>
     </section>
 
     <!-- Dine-in Section -->
-    <section class="section section--dine" id="dine">
-        <div class="container">
-            <div class="dine__grid">
-                                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Modern Korean Restaurant Interior" class="dine__image">
+    <section  id="dine">
+      <div class="section--dine ">
+        <div class="dine__grid">
+              <div  data-aos="zoom-in-right">
+                     <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Modern Korean Restaurant Interior" class="dine__image">
 
-                <div class="dine__content">
+            </div>
+
+                <div class="dine__content" data-aos="zoom-in-left">
                     <h3>Dine-In</h3>
-                    <p>Join us for an unforgettable dining experience in our beautifully designed restaurant space that captures the essence of Korean hospitality.</p>
-                    <p>Our warm and inviting atmosphere, combined with traditional Korean decor, makes it the perfect place for family gatherings, romantic dinners, or business meetings.</p>
-                    <p>Experience the authentic flavors while enjoying our exceptional service in a comfortable and welcoming environment.</p>
+                    <p class="description">Step into Manam Canteen, Enjoy your favourite dishes in a cozy, family-friendly space that feels just like home. From weekday lunches to weekend dinners, our dine-in service offers the full flavour experience.Come hungry, leave happy.</p>
                 </div>
             </div>
-        </div>
+      </div>
+           
     </section>
 
     <!-- Story Section -->
     <section class="section section--brown">
         <div class="container">
             <div class="story__grid">
-                <div class="story__content">
+                <div class="story__content" data-aos="zoom-in-up">
                     <h3>Our Story</h3>
                     <p>At Manam Canteen, we serve authentic South Indian flavours made with traditional recipes and a whole lot of heart. From crispy dosas to rich curries, our food brings the warmth of home right here to Canada. Whether you dine in, take out, order delivery, or book us for catering — every bite is a taste of tradition.</p>
                 </div>
+                <div data-aos="zoom-in-right">
                 <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Korean Chef Preparing Traditional Food" class="story__image">
+
+                </div>
             </div>
         </div>
     </section>
@@ -125,10 +133,10 @@
        <div class="reservation_section" id="reservation">
         <!-- Header Section -->
         <div class="header-section">
-            <div class="header-content">
+            <div class="header-content"  data-aos="zoom-in-up">
                 <h1>Reserve Your<br>Table Today!</h1>
             </div>
-            <div class="right-content description">
+            <div class="right-content description"  data-aos="zoom-in-down">
                 <p>Experience authentic South Indian cuisine—book your reservation or order online for a delightful meal.</p>
                 <button class="contact-btn">Contact Us</button>
             </div>
@@ -136,15 +144,15 @@
 
         <!-- Contact Info Section -->
         <div class="contact-info">
-            <div class="contact-item address-icon">
+            <div class="contact-item address-icon" data-aos="flip-up">
                 <h3>Address</h3>
                 <p>Unit 3B, 3415 Dixie Rd,<br>Mississauga, Ontario, L4Y 4J6</p>
             </div>
-            <div class="contact-item phone-icon">
+            <div class="contact-item phone-icon" data-aos="flip-up">
                 <h3>Phone</h3>
                 <p><a href="tel:+19052380707">+1 905 238 0707</a></p>
             </div>
-            <div class="contact-item email-icon">
+            <div class="contact-item email-icon" data-aos="flip-up">
                 <h3>Reservation</h3>
 <p>
   <a href="mailto:manamcanteen&#64;gmail.com">manamcanteen&#64;gmail.com</a>

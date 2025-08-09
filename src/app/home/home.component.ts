@@ -1,5 +1,6 @@
-import { CommonModule } from '@angular/common';
-import { ChangeDetectorRef, Component, ElementRef, ViewChild } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { ChangeDetectorRef, Component, ElementRef, ViewChild, AfterViewInit, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import * as AOS from 'aos';
 interface FoodCategory {
   id: number;
   name: string;
@@ -12,13 +13,29 @@ interface FoodCategory {
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent  {
+export class HomeComponent implements AfterViewInit, OnInit {
  @ViewChild('scrollContainer') scrollContainer!: ElementRef;
+ currentIndex = 0;
+  private slideInterval: any;
 
+  slides = [
+    {
+      image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2070&q=80',
+      alt: 'Modern Korean Restaurant Interior',
+      title: 'Dine-In',
+      description: 'Step into Manam Canteen, enjoy your favourite dishes in a cozy, family-friendly space that feels just like home. Come hungry, leave happy.'
+    },
+    {
+      image: 'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=2070&q=80',
+      alt: 'Special Dish',
+      title: 'Special Dishes',
+      description: 'Explore our chef’s special dishes prepared with love and fresh ingredients every day.'
+    }
+  ];
   isAtStart = true;
   isAtEnd = false;
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  // Removed duplicate constructor
 
   categories: FoodCategory[] = [
     {
@@ -49,6 +66,19 @@ export class HomeComponent  {
 
  
   ];
+  constructor(
+    private cdr: ChangeDetectorRef,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      AOS.init({
+        duration: 1000,
+      });
+      
+    }
+  }
 
   ngAfterViewInit() {
     setTimeout(() => {

@@ -1,5 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, HostListener, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-header',
@@ -24,6 +25,7 @@ export class HeaderComponent {
     if (this.isBrowser) {
       this.loadingAnimation();
     }
+ 
   }
 
   toggleMenu(): void {
