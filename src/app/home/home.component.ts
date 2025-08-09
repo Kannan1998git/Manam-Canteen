@@ -1,6 +1,8 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { ChangeDetectorRef, Component, ElementRef, ViewChild, AfterViewInit, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import * as AOS from 'aos';
+import { NgbCarouselConfig, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 interface FoodCategory {
   id: number;
   name: string;
@@ -9,7 +11,7 @@ interface FoodCategory {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,NgbModule,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -23,13 +25,30 @@ export class HomeComponent implements AfterViewInit, OnInit {
       image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=2070&q=80',
       alt: 'Modern Korean Restaurant Interior',
       title: 'Dine-In',
+      bgColor:'#823A2F1A',
       description: 'Step into Manam Canteen, enjoy your favourite dishes in a cozy, family-friendly space that feels just like home. Come hungry, leave happy.'
     },
+        {
+      image: 'assets/take_out.svg',
+      alt: 'Take out',
+      bgColor:"#F9E9E7",
+      title: 'Take out',
+
+      description: 'In a rush or on the move? Grab your favourite South Indian meals to go! Our takeout service is quick, easy, and always fresh. Perfect for busy workdays, quick lunch breaks, or cozy nights in. Order ahead and pick up with zero hassle.'
+    },
     {
-      image: 'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?auto=format&fit=crop&w=2070&q=80',
-      alt: 'Special Dish',
-      title: 'Special Dishes',
-      description: 'Explore our chef’s special dishes prepared with love and fresh ingredients every day.'
+      image: 'assets/delievery.svg',
+      alt: 'Delivery',
+      bgColor:"#DEEDE4",
+      title: 'Delivery',
+      description: 'Get the taste of South India delivered straight to your door. Order your favourites online and enjoy hot, flavourful meals in the comfort of home. We partner with top delivery platforms for smooth, on-time service. Great food, zero effort.'
+    },
+      {
+      image: 'assets/catering.svg',
+      alt: 'Catering',
+      title: 'Catering',
+      bgColor:"#FDFAE9",
+      description: 'Hosting a party, family gathering, or corporate event? Let us bring the bold flavours of South India to your guests. We offer customizable catering options for both vegetarian and non-vegetarian needs. Fresh, delicious, and sure to impress — every event, every time.'
     }
   ];
   isAtStart = true;
@@ -67,9 +86,13 @@ export class HomeComponent implements AfterViewInit, OnInit {
  
   ];
   constructor(
+    config: NgbCarouselConfig,
     private cdr: ChangeDetectorRef,
     @Inject(PLATFORM_ID) private platformId: Object
-  ) {}
+  ) {
+  config.showNavigationIndicators = true; 
+  config.showNavigationArrows = true; 
+  }
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {

@@ -96,20 +96,28 @@
     </section>
 
     <!-- Dine-in Section -->
-    <section  id="dine">
-      <div class="section--dine ">
+    <section id="dine">
+      <ngb-carousel
+      
+  class="dine-carousel">
+	>
+  <ng-template ngbSlide *ngFor="let data of slides">
+  <div class="section--dine" [ngStyle]="{'background-color': data.bgColor}">
         <div class="dine__grid">
-              <div  data-aos="zoom-in-right">
-                     <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Modern Korean Restaurant Interior" class="dine__image">
-
+              <div >
+                     <img [src]="data.image" alt="{{data.alt}}" class="dine__image">
             </div>
 
-                <div class="dine__content" data-aos="zoom-in-left">
-                    <h3>Dine-In</h3>
-                    <p class="description">Step into Manam Canteen, Enjoy your favourite dishes in a cozy, family-friendly space that feels just like home. From weekday lunches to weekend dinners, our dine-in service offers the full flavour experience.Come hungry, leave happy.</p>
+                <div class="dine__content">
+                    <h3>{{data.title}}</h3>
+                    <p class="description">{{data.description}}</p>
                 </div>
             </div>
       </div>
+  </ng-template>
+</ngb-carousel>
+
+    
            
     </section>
 
