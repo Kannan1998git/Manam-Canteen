@@ -36,9 +36,9 @@ object-fit: contain;
 
 .nav-container a {
   text-decoration: none;
-font-family: Poppins;
-font-weight: 400;
-font-size: 16px;
+font-family: var(--font-primary);
+font-weight: 500;
+font-size: 18px;
 line-height: 120%;
 color: #000000;
 position: relative;
