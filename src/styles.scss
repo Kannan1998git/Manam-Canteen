@@ -625,6 +625,13 @@
             .story__image {
                 height: 250px;
             }
+       .dine-carousel ::ng-deep .carousel-indicators {
+  bottom: -4rem !important;
+}
+            .dine-carousel ::ng-deep .carousel-control-next,
+.dine-carousel ::ng-deep .carousel-control-prev {
+  width: 9% !important;
+}
 }
    
       

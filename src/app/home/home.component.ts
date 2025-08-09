@@ -90,8 +90,11 @@ export class HomeComponent implements AfterViewInit, OnInit {
     private cdr: ChangeDetectorRef,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
+    config.pauseOnHover = false;
   config.showNavigationIndicators = true; 
   config.showNavigationArrows = true; 
+  config.pauseOnFocus = false;
+  config.interval = 3000; // Set the interval to 5 seconds
   }
 
   ngOnInit() {
